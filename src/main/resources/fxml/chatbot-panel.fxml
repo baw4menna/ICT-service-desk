@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.ChatController"
+      spacing="10"
+      style="-fx-background-color: white; -fx-padding: 10; -fx-background-radius: 8;">
+    <Label text="Student Help Chat"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+    <ScrollPane fx:id="scrollPane"
+                fitToWidth="true"
+                prefHeight="260"
+                style="-fx-background-color: transparent; -fx-border-color: #e0e0e0;">
+        <content>
+            <VBox fx:id="messagesBox"
+                  spacing="8"
+                  style="-fx-padding: 10;"/>
+        </content>
+    </ScrollPane>
+
+    <HBox spacing="8">
+        <TextField fx:id="inputField"
+                   HBox.hgrow="ALWAYS"
+                   promptText="Type your question..."
+                   style="-fx-padding: 8; -fx-font-size: 12px;"/>
+        <Button text="Send"
+                onAction="#handleSend"
+                style="-fx-background-color: #2563eb; -fx-text-fill: white;
+                       -fx-padding: 8 14; -fx-background-radius: 6;"/>
+        <Button text="Clear"
+                onAction="#clearChat"
+                style="-fx-background-color: #e5e7eb; -fx-text-fill: #374151;
+                       -fx-padding: 8 10; -fx-background-radius: 6;"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,8 @@
+Agent1,agent1@test.com,agent123,AGENT
+Agent2,agent2@test.com,agent123,AGENT
+Agent3,agent3@test.com,agent123,AGENT
+Agent4,agent4@test.com,agent123,AGENT
+Agent5,agent5@test.com,agent123,AGENT
+Admin User,admin@test.com,admin123,ADMIN
+raina haroon,rainaharoon@university.edu,hello,STUDENT
+

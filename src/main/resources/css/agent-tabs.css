@@ -1,0 +1,23 @@
+.tab-pane {
+    -fx-background-color: #ffffff;
+}
+
+/* Remove old header background */
+.tab-pane *.tab-header-background {
+    -fx-background-color: transparent;
+}
+
+/* Inactive tabs */
+.tab-pane *.tab {
+    -fx-background-radius: 20;
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 5 16 5 16;
+    -fx-text-base-color: #333333;
+    -fx-font-size: 13px;
+}
+
+/* Selected tab */
+.tab-pane *.tab:selected {
+    -fx-background-color: #1976d2;
+    -fx-text-base-color: white;
+}
