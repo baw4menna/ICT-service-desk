@@ -1,0 +1,16 @@
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 14px;
+    -fx-padding: 8 20;
+}
+
+.nav-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #3e5871;
+    -fx-background-radius: 5;
+}
+
+.nav-button:pressed {
+    -fx-background-color: #4a6a8a;
+}

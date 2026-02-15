@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.LoginController"
+            style="-fx-background-color: linear-gradient(to bottom, #f3f6ff, #ffffff);">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <children>
+
+                <!-- App logo / title -->
+                <VBox alignment="CENTER" spacing="5">
+                    <children>
+                        <Label text="ICT helpdesk"
+                               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+                    </children>
+                </VBox>
+
+                <!-- Card -->
+                <VBox maxWidth="800"
+                      style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 20;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 20,0,0,4);"
+                      prefWidth="600" spacing="20">
+
+                    <!-- Tabs -->
+                    <HBox spacing="0">
+                        <children>
+                            <Button fx:id="loginTabButton"
+                                    text="Login"
+                                    onAction="#showLoginPane"
+                                    style="-fx-background-radius: 20 0 0 20; -fx-background-color: #111827;
+                                           -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 210;"/>
+                            <Button fx:id="signupTabButton"
+                                    text="Sign Up"
+                                    onAction="#showSignupPane"
+                                    style="-fx-background-radius: 0 20 20 0; -fx-background-color: #e5e7eb;
+                                           -fx-text-fill: #4b5563; -fx-font-weight: bold; -fx-pref-width: 210;"/>
+                        </children>
+                    </HBox>
+
+                    <!-- Stack with Login & Sign Up panes -->
+                    <StackPane fx:id="authStack">
+
+                        <!-- LOGIN PANE -->
+                        <VBox fx:id="loginPane" spacing="12">
+                            <children>
+                                <Label text="Welcome Back"
+                                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                                <Label text="Sign in to your account"
+                                       style="-fx-font-size: 12px; -fx-text-fill: #6b7280;"/>
+
+                                <Label text="Email Address" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                                <TextField fx:id="emailField"
+                                           promptText="your.email@university.edu"
+                                           style="-fx-background-radius: 10; -fx-padding: 8 10;"/>
+
+                                <Label text="Password" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                                <PasswordField fx:id="passwordField"
+                                               promptText="Enter your password"
+                                               style="-fx-background-radius: 10; -fx-padding: 8 10;"/>
+
+                                <Label fx:id="errorLabel"
+                                       textFill="#ef4444"
+                                       style="-fx-font-size: 11px;"/>
+
+                                <Button text="Sign In"
+                                        onAction="#handleLogin"
+                                        style="-fx-background-color: #111827; -fx-text-fill: white;
+                                               -fx-font-weight: bold; -fx-background-radius: 999;
+                                               -fx-padding: 10 0; -fx-pref-width: Infinity;"/>
+                            </children>
+                        </VBox>
+
+                        <!-- SIGN UP PANE -->
+                        <VBox fx:id="signupPane" spacing="12" visible="false" managed="false">
+                            <children>
+                                <Label text="Create Account"
+                                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                                <Label text="Sign up for a new account"
+                                       style="-fx-font-size: 12px; -fx-text-fill: #6b7280;"/>
+
+                                <Label text="Full Name" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                                <TextField fx:id="regFullNameField"
+                                           promptText="John Doe"
+                                           style="-fx-background-radius: 10; -fx-padding: 8 10;"/>
+
+                                <Label text="Email Address" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                                <TextField fx:id="regEmailField"
+                                           promptText="your.email@university.edu"
+                                           style="-fx-background-radius: 10; -fx-padding: 8 10;"/>
+
+                                <Label text="Password" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                                <PasswordField fx:id="regPasswordField"
+                                               promptText="Create a password"
+                                               style="-fx-background-radius: 10; -fx-padding: 8 10;"/>
+
+                                <Label text="Account Type" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                                <ComboBox fx:id="regRoleCombo"
+                                          promptText="Select role"
+                                          style="-fx-background-radius: 10; -fx-padding: 4 10;"/>
+
+                                <Label fx:id="registerErrorLabel"
+                                       textFill="#ef4444"
+                                       style="-fx-font-size: 11px;"/>
+
+                                <Button text="Create Account"
+                                        onAction="#handleRegister"
+                                        style="-fx-background-color: #111827; -fx-text-fill: white;
+                                               -fx-font-weight: bold; -fx-background-radius: 999;
+                                               -fx-padding: 10 0; -fx-pref-width: Infinity;"/>
+                            </children>
+                        </VBox>
+
+                    </StackPane>
+
+                </VBox> <!-- end of card -->
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
